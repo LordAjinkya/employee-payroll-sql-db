@@ -1,1 +1,32 @@
 echo "Welcome to employee payroll database program"
+ysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+6 rows in set (2.10 sec)
+
+mysql> create database
+    -> ;
+
+
+mysql> show databases;
++---------------------------+
+| Database                  |
++---------------------------+
+| employee_payroll_database |
+| information_schema        |
+| mysql                     |
+| performance_schema        |
+| sakila                    |
+| sys                       |
+| world                     |
++---------------------------+
+7 rows in set (0.00 se
