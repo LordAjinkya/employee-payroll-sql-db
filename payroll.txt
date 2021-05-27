@@ -73,3 +73,14 @@ mysql> select * from employee_payroll;
 |  3 | Charlie | 3000000 | 2020-05-21 |
 +----+---------+---------+------------+
 3 rows in set (0.01 sec)
+
+//UC4-Retrieve salary from particular date
+mysql> select*from employee_payroll
+    ->     where start between cast('2019-01-01' as date) and date(now());
++----+---------+---------+------------+
+| id | name    | salary  | start      |
++----+---------+---------+------------+
+|  2 | Terisa  | 2000000 | 2019-11-13 |
+|  3 | Charlie | 3000000 | 2020-05-21 |
++----+---------+---------+------------+
+2 rows in set (0.03 sec)
