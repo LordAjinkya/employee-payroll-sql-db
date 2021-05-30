@@ -196,3 +196,20 @@ mysql> select gender,sum(salary) gender from employee_payroll group by gender;
 | F      | 2000000 |
 +--------+---------+
 2 rows in set, 1 warning (0.00 sec) 
+
+//UC8-Update phoone no., address and department
+mysql> ALTER TABLE employee_payroll ADD phone BIGINT AFTER name;
+Query OK, 0 rows affected (9.83 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> UPDATE employee_payroll SET address='Nagpur';
+Query OK, 3 rows affected (1.52 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+mysql> select * from employee_payroll;
++----+---------+-------+--------------+---------+------------+--------+---------+------------+
+| id | name    | phone | phone_number | address | department | gender | salary  | start      |
++----+---------+-------+--------------+---------+------------+--------+---------+------------+
+|  1 | Bill    |  NULL | NULL         | Nagpur  |            | M      | 1000000 | 2018-01-03 |
+|  2 | Terisa  |  NULL | NULL         | Nagpur  |            | F      | 2000000 | 2019-11-13 |
+|  3 | Charlie |  NULL | NULL         | Nagpur  |            | M      | 3000000 | 2020-05-21 |
++----+---------+-------+--------------+---------+------------+--------+---------+------------+
+3 rows in set (0.09 sec)
