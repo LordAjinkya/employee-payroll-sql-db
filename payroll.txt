@@ -255,3 +255,21 @@ mysql> DESCRIBE employee_payroll;
 | start        | date         | NO   |     | NULL    |                |
 +--------------+--------------+------+-----+---------+----------------+
 13 rows in set (0.39 sec)
+
+///UC10-create new table to add employee details
+mysql> Insert into Employee_Details ( Name, Gender, Mobile_Number , Address, Experience, emailId) values ( 'Bill', 'M' ,'1325469781' , 'Mumbai' ,  '4 Years', 'lubill@hotmail.com'),
+    ->  ( 'Mark',  'M' , ' 789546122' , 'shimla', '3 Years', 'garysmith@cop.in'),
+    ->  ( 'Charlie', 'F' , '546981322', 'japan' , '2 Years', 'terisa2@gmial.com');
+Query OK, 3 rows affected (0.38 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> Select * From employee_Details;
++------------+---------+--------+---------------+---------+------------+--------------------+
+| EmployeeID | Name    | Gender | Mobile_Number | Address | Experience | EmailId            |
++------------+---------+--------+---------------+---------+------------+--------------------+
+|          1 | Bill    | M      |    1325469781 | Mumbai  | 4 Years    | lubill@hotmail.com |
+|          2 | Mark    | M      |     789546122 | shimla  | 3 Years    | garysmith@cop.in   |
+|          3 | Charlie | F      |     546981322 | japan   | 2 Years    | terisa2@gmial.com  |
++------------+---------+--------+---------------+---------+------------+--------------------+
+3 rows in set (0.00 sec)
+
